@@ -35,5 +35,7 @@ illustrative graph with start location (black), itinary (red) and goal location 
 
 ![](asset/newplot.png)
 
+Returned paths using Uniform Cost algorithm (start = location_8, goal = location_11):
 
+![](asset/paths_uniformCost.jpg)
 
