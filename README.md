@@ -38,7 +38,7 @@ Besides the **euclidian distance**, 2 other estimators are commonly used:
 - **Diagonal distance**. This counts the maximum of either the vertical distance on y axis or the horizontal distance on x axis. This guarantees to be optimistic about the true distance (pythagore theorem). This is used when it is allowed to move on all 8 directions of a 2D chessboard (think of the queen in Chess).
 The Euclidean distance is used when all directions are allowed.
 
-In the worst case, time complexity is O(E), where E is the number of edges in the graph (like roads).
+In the worst case, time complexity is O(E), where E is the number of edges in the graph (like roads), since a good heuristic allows A* to prune away many of the nodes that a less efficient (or 'uninformed') search would expand. A* is called 'informed' search because some additional information is also present, which make it easy to reach the goal (the estimation of the distance to the target).
 
 You can read a more detailed A* review [here](https://www.geeksforgeeks.org/a-search-algorithm/).
 
