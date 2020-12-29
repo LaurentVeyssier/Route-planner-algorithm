@@ -3,7 +3,7 @@ Find the shortest route using A* algorithm and graphs (Route Planner application
 
 This is the final project of UDACITY's [Data Structures & Algorithms Nanodegree Program](https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256).
 
-The objective of the project is to use A* search to implement a "Google-maps" style route planning algorithm.
+The objective of the project is to use A* search to implement a "Google-maps" style route planning algorithm. The code should not contain any unnecessary performance overhauls (such as unnecessary duplication of lists or looping through a large set or dictionary when a single constant-time lookup is possible). Methods and functions should be optimal and efficient. 
 
 # Project content
 
