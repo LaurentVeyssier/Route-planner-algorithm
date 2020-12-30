@@ -73,3 +73,8 @@ Convergence achieved with dynamic programming (same start -> target as above):
 shortest route location_8 to location_11:
 
 ![](asset/newplot2.png)
+
+
+# Dependencies
+
+- the code was run using python 3.6 and older versions of networkx 1.11 and plotly 2.0.15
