@@ -54,6 +54,7 @@ Dynamic programming breaks down the optimization problem into smaller ones and r
 The algorithm finds the function j() by successive iterations. For our graph, the solution is found in about 30 iterations.
 The algorithm outputs a distance matrix with all node to node distance as well as the output of j for all nodes (ie shortest distance from any node to the goal). These are then used to derive the shortest path sequence.
 
+Complexity of this approach is O(n^2) where n is the number of nodes (locations).
 
 # Results
 
