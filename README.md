@@ -12,12 +12,13 @@ The objective is to find the shortest route from a starting location to a goal l
 The algorithm outputs the shortest travelling distance and the shortest route (ordered sequence of traversed locations).
 
 
-I implement 3 different algorithms in the py file.
+I implement 4 different algorithms in the py file.
 - Calculation of the shortest route using Dijkstra Dynamic programming algorithm
 - Calculation of the shortest route using Uniform Cost algorithm
 - Calculation of the shortest route using A* optimal algorithm used for route planning
+- Calculation of the shortest route using dynamic programming and Bellman equation 
 
-While the A* algorithm only produces the shortest path, the Uniform cost algorithm returns all possible paths and select the shortest. This adds a functionality as it allows to select the second best alternative route just like in an existing route planner. This can of course also be implemented for A*.
+While the A* algorithm outputs the shortest path, the Uniform cost algorithm returns all possible paths and select the shortest. This adds a functionality as it allows to select the second best alternative route just like in an existing route planner. This can of course also be implemented for A*.
 
 # A* algorithm
 
@@ -42,6 +43,18 @@ In the worst case, time complexity is O(E), where E is the number of edges in th
 
 You can read a more detailed A* review [here](https://www.geeksforgeeks.org/a-search-algorithm/).
 
+# Dynamic programming approach
+
+I adapted the code from this detailed [article](https://python.quantecon.org/short_path.html).
+Dynamic programmming breaks down the optimization problem into smaller ones and re-use previous calculation to be more efficient than a recursive solution for example. Here the algorithm aims to approximate the function j() which provides the least path cost from a node to the target. Assuming we know this function, then we can write the Bellman equation:
+- `j(nodeA) = min [ C(nodeA, nodeB) + j(nodeB) ] over all nodeB which are neighbours of nodeA`
+- C() is the transition cost (or step cost) to go from nodeA to nodeB (this corresponds to the distance or edge cost)
+- j() is the path cost from the node to the goal
+
+The algorithm finds the function j() by successive iterations. For our graph, the solution is found in about 30 iterations.
+The algorithm outputs a distance matrix with all node to node distance as well as the output of j for all nodes (ie shortest distance from any node to the goal). These are then used to derive the shortest path sequence.
+
+
 # Results
 
 illustrative graph with start location (black), itinary (red) and goal location (yellow).
@@ -52,3 +65,6 @@ Returned paths using Uniform Cost algorithm (start = location_8, goal = location
 
 ![](asset/paths_uniformCost.jpg)
 
+Convergence achieved with dynamic programming:
+
+![](asset/DP.jpg)
