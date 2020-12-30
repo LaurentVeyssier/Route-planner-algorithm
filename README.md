@@ -69,3 +69,7 @@ Returned paths using Uniform Cost algorithm (start = location_8, goal = location
 Convergence achieved with dynamic programming (same start -> target as above):
 
 ![](asset/DP.jpg)
+
+shortest route location_8 to location_11:
+
+![](asset/newplot2.png)
