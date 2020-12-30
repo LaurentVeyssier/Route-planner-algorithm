@@ -65,6 +65,6 @@ Returned paths using Uniform Cost algorithm (start = location_8, goal = location
 
 ![](asset/paths_uniformCost.jpg)
 
-Convergence achieved with dynamic programming (same start -> target as above:
+Convergence achieved with dynamic programming (same start -> target as above):
 
 ![](asset/DP.jpg)
