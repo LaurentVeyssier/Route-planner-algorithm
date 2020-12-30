@@ -46,7 +46,7 @@ You can read a more detailed A* review [here](https://www.geeksforgeeks.org/a-se
 # Dynamic programming approach
 
 I adapted the code from this detailed [article](https://python.quantecon.org/short_path.html).
-Dynamic programmming breaks down the optimization problem into smaller ones and re-use previous calculation to be more efficient than a recursive solution for example. Here the algorithm aims to approximate the function j() which provides the least path cost from a node to the target. Assuming we know this function, then we can write the Bellman equation:
+Dynamic programming breaks down the optimization problem into smaller ones and re-use previous calculation to be more efficient than a recursive solution for example. Here the algorithm aims to approximate the function j() which provides the least path cost from a node to the target. Assuming we know this function, then we can write the Bellman equation:
 - `j(nodeA) = min [ C(nodeA, nodeB) + j(nodeB) ] over all nodeB which are neighbours of nodeA`
 - C() is the transition cost (or step cost) to go from nodeA to nodeB (this corresponds to the distance or edge cost)
 - j() is the path cost from the node to the goal
@@ -65,6 +65,6 @@ Returned paths using Uniform Cost algorithm (start = location_8, goal = location
 
 ![](asset/paths_uniformCost.jpg)
 
-Convergence achieved with dynamic programming:
+Convergence achieved with dynamic programming (same start -> target as above:
 
 ![](asset/DP.jpg)
