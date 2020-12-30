@@ -13,7 +13,7 @@ The algorithm outputs the shortest travelling distance and the shortest route (o
 
 
 I implement 4 different algorithms in the py file.
-- Calculation of the shortest route using Dijkstra Dynamic programming algorithm
+- Calculation of the shortest route using Dijkstra algorithm
 - Calculation of the shortest route using Uniform Cost algorithm
 - Calculation of the shortest route using A* optimal algorithm used for route planning
 - Calculation of the shortest route using dynamic programming and Bellman equation 
